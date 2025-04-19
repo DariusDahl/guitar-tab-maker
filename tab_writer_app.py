@@ -3,8 +3,8 @@
 import streamlit as st
 
 # Page setup
-st.set_page_config(page_title="Guitar Tab Maker", layout="wide")
-st.title("🎸 Guitar Tab Maker")
+st.set_page_config(page_title="guitar-tab-maker Tab Maker", layout="wide")
+st.title("🎸 guitar-tab-maker Tab Maker")
 
 # Constants
 strings = ["E (1st)", "B (2nd)", "G (3rd)", "D (4th)", "A (5th)", "E (6th)"]
