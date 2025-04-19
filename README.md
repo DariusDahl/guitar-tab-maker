@@ -97,6 +97,13 @@ Add special notation for techniques like:
    streamlit run tab_writer_app.py
    ```
 
+## 🤝 Contributing
+
+Contributions, feature suggestions, and bug reports are welcome!  
+Feel free to fork this repo and open a pull request.
+
+If you'd like to suggest a new guitar feature or UI improvement, please open an issue!
+
 ## 📄 License
 
 MIT License. Use freely and contribute to improve!
