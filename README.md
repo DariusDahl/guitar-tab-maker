@@ -2,6 +2,10 @@
 
 **Guitar Tab Maker** is a modern, interactive tool for creating guitar tablature using a virtual fretboard interface. Click on frets to add notes, insert pauses, undo changes, and (soon) play back your tabs with real audio samples. Inspired by tools like [tab-maker.com](https://tab-maker.com), this app aims to be the most intuitive and feature-rich way to write and hear your guitar ideas.
 
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-%E2%9C%A8-lightgrey)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ---
 
 ## 🚀 Features
@@ -29,6 +33,9 @@
 - Play back individual notes when selected on the fretboard.
 - Full tab playback so you can hear your composition in real time.
 - Ability to adjust playback **tempo** and **loop** specific sections.
+> 🎵 Audio playback will require high-quality guitar note samples.  
+> I'm currently evaluating the best sample sets to include.
+
 
 ### 🧠 Tab Editing
 - Click any cell in the tab to edit the note directly from the fretboard.
@@ -76,3 +83,26 @@ Add special notation for techniques like:
    ```bash
    git clone https://github.com/yourusername/guitar-tab-maker.git
    cd guitar-tab-maker
+   ```
+
+2. Install the required python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   > `requirements.txt` includes all the necessary Python libraries to run the app (e.g., Streamlit).
+
+
+3. Run the app:
+   ```bash
+   streamlit run tab_writer_app.py
+   ```
+
+## 📄 License
+
+MIT License. Use freely and contribute to improve!
+
+## 💡 Credits
+
+Built and maintained by Darius Dahl
+
+Inspired by: [tab-maker.com](https://tab-maker.com/en)
