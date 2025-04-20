@@ -55,6 +55,10 @@ for row_idx, string in enumerate(strings):
     for fret in range(num_frets):
         key = f"fret-{row_idx}-{fret}"
         note_name = get_note_name(open_string_notes[row_idx], fret)
+        # for now, this works to make the shorter length button names a closer length to the longer ones,
+        # (the ones with '#'s). this is a temporary fix and needs a cleaner, more permanent solution.
+        if len(note_name) == 2:
+            note_name = "\u00A0" + note_name + "\u00A0"  # Unicode non-breaking space
 
         if cols[fret + 1].button(note_name, key=key):
             if st.session_state.active_edit:
@@ -69,25 +73,25 @@ for row_idx, string in enumerate(strings):
                 st.rerun()
 
 # Editable tab grid (select cell to edit)
-st.subheader("🖊️ Editable Tab Grid")
-
-if st.session_state.tab_data:
-    col_labels = st.columns(len(st.session_state.tab_data) + 1)
-    col_labels[0].markdown("**String**")
-    for i in range(len(st.session_state.tab_data)):
-        col_labels[i + 1].markdown(f"**{i + 1}**")
-
-    for row_idx, string in enumerate(strings):
-        row_cols = st.columns(len(st.session_state.tab_data) + 1)
-        row_cols[0].markdown(f"**{string}**")
-
-        for col_idx in range(len(st.session_state.tab_data)):
-            val = st.session_state.tab_data[col_idx][row_idx]
-            key = f"tabcell-{row_idx}-{col_idx}"
-            label = f"[{val}]" if (row_idx, col_idx) == st.session_state.active_edit else val
-
-            if row_cols[col_idx + 1].button(label, key=key):
-                st.session_state.active_edit = (row_idx, col_idx)
+# st.subheader("🖊️ Editable Tab Grid")
+#
+# if st.session_state.tab_data:
+#     col_labels = st.columns(len(st.session_state.tab_data) + 1)
+#     col_labels[0].markdown("**String**")
+#     for i in range(len(st.session_state.tab_data)):
+#         col_labels[i + 1].markdown(f"**{i + 1}**")
+#
+#     for row_idx, string in enumerate(strings):
+#         row_cols = st.columns(len(st.session_state.tab_data) + 1)
+#         row_cols[0].markdown(f"**{string}**")
+#
+#         for col_idx in range(len(st.session_state.tab_data)):
+#             val = st.session_state.tab_data[col_idx][row_idx]
+#             key = f"tabcell-{row_idx}-{col_idx}"
+#             label = f"[{val}]" if (row_idx, col_idx) == st.session_state.active_edit else val
+#
+#             if row_cols[col_idx + 1].button(label, key=key):
+#                 st.session_state.active_edit = (row_idx, col_idx)
 
 # Formatted tab output
 st.subheader("🎼 Tab Output")
