@@ -8,6 +8,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+Try it now:  **[guitar-tab-maker.streamlit. app](https://guitar-tab-maker.streamlit.app/)**
+
+---
+
 ## 🚀 Features
 
 - 🎛 **Clickable Fretboard UI:**  
@@ -113,3 +119,4 @@ MIT License. Use freely and contribute to improve!
 Built and maintained by Darius Dahl
 
 Inspired by: [tab-maker.com](https://tab-maker.com/en)
+
