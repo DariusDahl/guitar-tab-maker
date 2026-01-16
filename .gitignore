@@ -1,6 +1,17 @@
+# Virtual environments
+.venv/
 venv/
+
+# Python cache / compiled
 __pycache__/
 *.pyc
+
+# Environment files
 .env
-*.DS_Store
+
+# JetBrains / PyCharm
+.idea/
+
+# OS / misc
+.DS_Store
 *.log
