@@ -1,5 +1,3 @@
-# Full version with improved tab output and proper layout
-
 import streamlit as st
 
 # Page setup
